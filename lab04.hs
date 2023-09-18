@@ -107,3 +107,19 @@ cilindro r h =
     let areaLateral = 2 * pi * r * h
         areaBase = pi * r^2
     in areaLateral + 2 * areaBase
+
+raizMe :: Float -> Float -> Float -> Float
+raizMe a b c
+    | delta == 0 || delta > 0 = raizMenor
+    | otherwise = -1
+    where
+        delta = (b ^ 2) - (4 * a * c)
+        raizMenor = ((-b) - (sqrt delta)) / (2 * a)
+
+raizMa :: Float -> Float -> Float -> Float
+raizMa a b c
+    | delta == 0 || delta > 0 = raizMaior
+    | otherwise = -1
+    where
+        delta = (b ^ 2) - (4 * a * c)
+        raizMaior = ((-b) + (sqrt delta)) / (2 * a)
