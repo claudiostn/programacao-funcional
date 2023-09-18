@@ -21,3 +21,6 @@ triplo num1 num2 = 3 * (num1 `div` num2)
 
 ordemAlfabetica :: Char -> Char -> Bool
 ordemAlfabetica ch1 ch2 = ch1 <= ch2
+
+igualAbs :: Int -> Int -> Bool
+igualAbs num1 num2 = abs num1 == abs num2
