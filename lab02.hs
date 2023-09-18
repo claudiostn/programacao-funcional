@@ -19,3 +19,5 @@ mediaTres a b c = (a + b + c)/3
 triplo :: Int -> Int -> Int
 triplo num1 num2 = 3 * (num1 `div` num2)
 
+ordemAlfabetica :: Char -> Char -> Bool
+ordemAlfabetica ch1 ch2 = ch1 <= ch2
