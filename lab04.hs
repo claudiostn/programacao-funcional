@@ -54,8 +54,8 @@ myNot True = False
 myNot False = True
 
 lucky :: Int -> String
-lucky 7 = “Voce acertou, sortudo!”
-lucky _ = “Oops, tente outra vez!”
+lucky 7 = "Voce acertou, sortudo!"
+lucky _ = "Oops, tente outra vez!"
 
 diaDaSemanaCasamento :: Int -> String
 diaDaSemanaCasamento 1 = "Domingo"
@@ -76,12 +76,12 @@ nAnd True True = False
 nAnd _ _ = True 
 
 escrevaMe :: Int -> String
-escrevaMe 1 = “Um!”
-escrevaMe 2 = “Dois!”
-escrevaMe 3 = “Tres!”
-escrevaMe 4 = “Quatro!”
-escrevaMe 5 = “Cinco!”
-escrevaMe _ = “Cansei!”
+escrevaMe 1 = "Um!"
+escrevaMe 2 = "Dois!"
+escrevaMe 3 = "Tres!"
+escrevaMe 4 = "Quatro!"
+escrevaMe 5 = "Cinco!"
+escrevaMe _ = "Cansei!"
 
 diaDaSemanaCase :: Int -> String
 diaDaSemanaCase x = case x of
@@ -96,10 +96,10 @@ diaDaSemanaCase x = case x of
 
 imc :: Float -> Float -> String
 imc peso altura
-    | razao < 18.5 = “Abaixo do peso”
-    | razao < 25.0 = “Peso normal”
-    | razao < 30.0 = “Sobrepeso”
-    | otherwise = “Obesidade”
+    | razao < 18.5 = "Abaixo do peso"
+    | razao < 25.0 = "Peso normal"
+    | razao < 30.0 = "Sobrepeso"
+    | otherwise = "Obesidade"
     where razao = peso / altura ^ 2
 
 cilindro :: Float -> Float -> Float
