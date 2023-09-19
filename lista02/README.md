@@ -1,6 +1,5 @@
 # Lista 2
 
-
 - Defina uma função que determina se um número é múltiplo de 3 e/ou 5. A saída deve ser a
 mensagem "multiplo de 3 e 5", "multiplo de 3", "multiplo de 5", ou "nao eh multiplo de 3
 nem de 5"

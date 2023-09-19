@@ -1,4 +1,6 @@
-﻿## Exercícios
+﻿# Recursão Primitiva
+
+## Exercícios
 
 - Usando recursão primitiva: 
 	- Defina a função multiplica que multiplica dois números. Não pode usar o operador (*), mas pode usar (+).
