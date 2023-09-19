@@ -43,7 +43,7 @@ coletaPares (x:xs)
 
 meuReplicate :: Int -> Int -> [Int]
 meuReplicate _ 0 = []
-meuReplicate item quant = [item] ++ meuReplicate item (quant - 1)
+meuReplicate item quant = item : meuReplicate item (quant - 1)
 
 meuAnd :: [Bool] -> Bool
 meuAnd [] = True
@@ -53,5 +53,13 @@ meuOr :: [Bool] -> Bool
 meuOr [] = False
 meuOr (x:xs) = x || meuOr xs
 
+meuDrop :: Int -> [Int] -> [Int]
+meuDrop 0 (x:xs) = x:xs
+meuDrop n (x:xs) = meuDrop (n-1) xs
+
+meuUnzip :: [(Int, Int)] -> ([Int], [Int])
+meuUnzip [] = ([], [])
+meuUnzip ((x,y):ps) = (x:xs, y:ys)
+    where (xs, ys) = meuUnzip ps
 
 
