@@ -1,3 +1,5 @@
+import Data.Char
+
 meuLength :: [Int] -> Int
 meuLength []= 0 -- caso base
 meuLength (x:xs) = 1 + meuLength xs -- caso geral
@@ -47,7 +49,7 @@ meuReplicate item quant = item : meuReplicate item (quant - 1)
 
 meuAnd :: [Bool] -> Bool
 meuAnd [] = True
-meuAnd (x:xs) = x && meuAnd xs 
+meuAnd (x:xs) = x && meuAnd xs
 
 meuOr :: [Bool] -> Bool
 meuOr [] = False
@@ -62,4 +64,38 @@ meuUnzip [] = ([], [])
 meuUnzip ((x,y):ps) = (x:xs, y:ys)
     where (xs, ys) = meuUnzip ps
 
+somaPares :: [Int] -> Int
+somaPares [] = 0
+somaPares (x:xs)
+    | even x = x + somaPares xs
+    | otherwise = somaPares xs
 
+produtoImpares :: [Int] -> Int
+produtoImpares [] = 1
+produtoImpares (x:xs)
+    | odd x = x * produtoImpares xs
+    | otherwise = produtoImpares xs
+
+apenasDigitos :: String -> String
+apenasDigitos [] = []
+apenasDigitos (x:xs)
+    | isDigit x = x : apenasDigitos xs
+    | otherwise = apenasDigitos xs
+
+elemNum :: [Int] -> Int -> Int
+elemNum [] _ = 0
+elemNum (x:xs) n
+    | n == x = 1 + elemNum xs n
+    | otherwise = elemNum xs n
+
+unicos :: [Int] -> [Int]
+unicos [] = []
+unicos (x:xs)
+    | elemNum xs x == 0 = x : unicos xs
+    | otherwise = unicos xs
+
+elemExiste :: [Int] -> Int -> Bool
+elemExiste [] _ = False
+elemExiste (x:xs) n
+    | x == n = True
+    | otherwise = elemExiste xs n
